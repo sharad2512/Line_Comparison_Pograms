@@ -1,0 +1,2 @@
+module line.Comprison.main {
+}
