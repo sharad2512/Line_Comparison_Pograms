@@ -25,22 +25,25 @@ public class LineComparison {
     public static void main(String[] args) {
         LineComparison obj = new LineComparison();
 
-        float length1, length2;
+        int length1, length2;
 
-        length1 = obj.lineCoordinates();
+        length1 = (int) obj.lineCoordinates();
+        Integer line1 = length1;
         System.out.println("Enter coordinates for second line ");
 
-        length2 = obj.lineCoordinates();
+        length2 = (int) obj.lineCoordinates();
+        Integer line2 = length2;
         System.out.println("Length of line one is " + length1);
         System.out.println("Length of line two is " + length2);
-        if(length1 > length2){
-            System.out.println("Line1 is greater than line2 ");
-        }
-        else if(length1 < length2 )
-            System.out.println("Line1 is lesser than line2 ");
+        int result = line1.compareTo(line2);
+
+        if (result > 0) {
+            System.out.println("Line1 is greater than Line2 ");
+        } else if (result < 0)
+            System.out.println("Line1 is lesser than Line2 ");
 
         else
-            System.out.println("Both lines are equal ");
+            System.out.println("Both Lines are equal ");
     }
 
     }
